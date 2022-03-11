@@ -6,9 +6,13 @@ const Paths = () => {
         <div className='p-4'>
             <Routes>
                 <Route exact path='/' element={<Navigate replace to="/search" />} />
-                {["/search", "/images", "/news"].map((path, index) =>
+                {/* {["/search", "/images", "/news", "/videos"].map((path, index) =>
                     <Route path={path} element={<Results />} key={index} />
-                )}
+                )} */}
+                <Route path='/search' element={<Results />} />
+                <Route path='/images' element={<Results />} />
+                <Route path='/news' element={<Results />} />
+                <Route path='/videos' element={<Results />} />
             </Routes>
         </div>
     )
